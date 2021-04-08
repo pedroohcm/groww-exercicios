@@ -14,35 +14,35 @@ Caso sejam fornecidos valores negativos, retornar erro para o usuário.
 
 */
 /* entrada */
-function calculaTriangulo(_A = 0, _B = 0, _C = 0) {
+
+    function calculaTriangulo(_A = 0, _B = 0, _C = 0) {
     var tipo = ""
     /*Processamento*/
-
     if (_A <= 0) {
-            tipo = "Informe lado maior que zero"
-    } 
+        tipo = "Informe lado maior que zero"
+    }
     if (_B <= 0) {
-            tipo = "Informe lado maior que zero"
-        } 
+        tipo = "Informe lado maior que zero"
+    }
     if (_C <= 0) {
-            tipo = "Informe lado maior que zero"
-            } 
+        tipo = "Informe lado maior que zero"
+    }
     if (_A > _B + _C) {
-            tipo = "Não existe triângulo"
-            }
+        tipo = "Não existe triângulo"
+    }
     if (_A ** 2 == _B ** 2 + _C ** 2) {
-            tipo = "Triângulo Retângulo"
-                    } 
+        tipo = "Triângulo Retângulo"
+    }
     if (_A ** 2 > _B ** 2 + _C ** 2) {
-            tipo = "Triângulo obtusângulo"
-                        }
-    if (_A**2 < _B**2 + _C**2) {
-            tipo = "Triângulo acutângulo"
-                        }
+        tipo = "Triângulo obtusângulo"
+    }
+    if (_A ** 2 < _B ** 2 + _C ** 2) {
+        tipo = "Triângulo acutângulo"
+    }
 
     /* saída */
     return tipo
-}
+} 
 
 
 
@@ -66,22 +66,22 @@ function corrigirsalario(_c1 = 0.15, _c2 = 0.12, _c3 = 0.1, _c4 = 0.07, _c5 = 0.
     var salario = 0
     if (salario <= 400) {
         salariocorrigido = salario + _c1 * salario
-    } 
+    }
     if (salario > 400 && salario <= 700) {
         salariocorrigido = salario + _c2 * salario
-        } 
+    }
     if (salario > 700 && salario <= 1000) {
         salariocorrigido = salario + _c3 * salario
-            } 
+    }
     if (salario > 1000 && salario <= 2000) {
         salariocorrigido = salario + _c4 * salario
-                } 
+    }
     if (salario > 2000 && salario <= 3500) {
         salariocorrigido = salario + _c5 * salario
-                    } 
+    }
     if {
         salariocorrigido = salario + _c6 * salario
-                    }
+    }
 
     return salariocorrigido
 }
