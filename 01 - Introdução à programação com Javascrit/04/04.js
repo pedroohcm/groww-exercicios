@@ -52,9 +52,14 @@ Entrada = 2
 Processamento = O Programa gerou o número 5
 Saída = "Que pena, você chutou 2 mas o nosso número é 5"
 
+<<<<<<< Updated upstream
 Entrada = 7
 Processamento = O programa gerou o número 7
 Saída: "Parabéns! Vocẽ entrou com o número 7 e o programa também gerou o número 7"
+=======
+lista 01= [0, 2, 5, 7, 10 ,11]
+lista 02= [1, 2, 6, 10]
+>>>>>>> Stashed changes
 
 Para gerar um número aleatório entre 1 e 10, utilize o seguinte código
 Math.floor(Math.random() * 10) + 1

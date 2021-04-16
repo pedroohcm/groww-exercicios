@@ -17,7 +17,7 @@ Cria uma função que leia o mês do aniversário da pessoa(01 ~ 12) e retorne s
 
 */
 
-function leSigno(){
+function leSigno() {
 
 }
 
@@ -29,7 +29,7 @@ b) a divisão entre eles eles
 c) a soma entre eles
 d) a subtração entre eles
 */
-function calculaTudo(){
+function calculaTudo() {
 
 }
 /* Questão 03
@@ -49,9 +49,9 @@ saída 2 omeletes
 
 */
 
-function retornaOmelete(){
+function retornaOmelete() {
 
-    
+
 }
 /*
 Questão 04
@@ -63,7 +63,7 @@ O seu programa deve receber o tipo de operação entrada pelo usuário e garanti
 os dois números entrados serão calculados de acordo.
 
 Exemplo:
-Chamada : funçãoCalculadora("Multiplicação", 2, 2)
+Chamada : functionCalculadora("Multiplicação", 2, 2)
 Saída : "A calculadora executou a operação de Multiplicação e retornou o valor 4"
 
 Será necessário criar pelo menos as quatro operações básicas da matemática(
@@ -78,15 +78,23 @@ Pontuação bônus: Criar uma função separada para cada operação matemática
 
 */
 
-function functionCalculadora() {
+function functionCalculadora(operacao, valor01, valor02) {
+    var valor = 0
+    if (operacao == "Multi") {
+        valor = multipla(valor01, valor02)
+    }
 
+    return `A calculadora executou a operação ${operacao} e o valor deu : ${valor}`
 }
 
+function multipla(a, b) {
+    return a * b;
+}
 
 /* Questão 02 (Valendo uma pontuação maior)
 
 
-Questão OBI(Olimpíada Brasileira de Matemática - 2012, Fase 2, Nível Junior)
+Questão OBI(Olimpíada Brasileira de Informática - 2012, Fase 2, Nível Junior)
 
 João Deseja fazer bolos para seus amigos usando uma receita que indica que devem ser
 usadas 2 xícaras de farinha de trigo, 3 ovos e 5 colheres de sopa de leite. Em casa
@@ -102,9 +110,43 @@ colheres de sopa de leite que João tem em Casa
 
 Saída: Retornar a quantidade máxima de bolos
 entrada : 4,6,10 saída: 2
-ebtrada 4, 6, 9 saída : 1
+entrada : 4, 6, 9 saída : 1
 */
 
-function calculaBolo() {
+function calculaBolo(far, ov, le) {
+    var qtFarinhaDeTrigo = far/2
+    var qtOvos = ov/3
+    var qtLeite = le/5
+    var mensagemBolo = ''
+
+    if (qtFarinhaDeTrigo === qtOvos && qtOvos === qtLeite) {
+
+        mensagemBolo = qtFarinhaDeTrigo
+
+    }else{
+
+        if(qtFarinhaDeTrigo < qtOvos && qtFarinhaDeTrigo < qtLeite){
+            mensagemBolo = qtFarinhaDeTrigo
+        }
+        if(qtLeite < qtFarinhaDeTrigo && qtLeite < qtOvos){
+            mensagemBolo = qtLeite
+        }
+        if(qtOvos < qtFarinhaDeTrigo && qtOvos < qtLeite){
+            mensagemBolo = qtOvos
+        }
+    }
+
+    console.log(`Total de bolos ${mensagemBolo}`)
+
+
+    /* for(var i = 1; i <= 10; i++){
+        if(farinhaDeTrigo%2 == 0 && ovos%3 == 0 && leite%5 == 0){
+            var bolo = 0 
+            bolo = bolo + 1   
+        }
+        
+    }   */
+
+
 
 }
