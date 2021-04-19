@@ -2,7 +2,49 @@
 
 /* Vamos trabalhar mais desafios de programação nessa aula */
 
-/* Questão 01
+/* Questão 01 
+
+Cria uma função para ajudar um Parque de Diversões saber se uma pessoa com determinada 
+altura pode entrar em determinado brinquedo
+
+Montanha-russa :  Acima de 1,60
+Roda gidante : Acima de 1,50 
+Carrinho bate-bate: Acima de 1,40
+Trem fantasma : Acima de 1,30
+Carrossel : Livre
+
+Exemplo:
+    Entrada : 1,55
+    Saída:
+        Montanha-Russa : Não pode Entrar
+        Roda Gigante: Liberado
+        Carrinho bate-bate: Liberado
+        Trem Fantasma : Liberado
+        Carrossel : Liberado
+*/
+function calculaAltura(altura = 0) {
+    var mensagemaltura = ""
+    if (altura < 1.3) {
+        mensagemaltura = "Montanha-Russa : Não pode  / Roda Gigante: Não pode / Carrinho bate-bate: Não pode /  Trem Fantasma : Não pode / Carrossel:  pode"
+    }
+    if (altura >= 1.3 && altura < 1.4) {
+        mensagemaltura = "Montanha-Russa : Não pode  / Roda Gigante: Não pode / Carrinho bate-bate: Não pode /  Trem Fantasma :  pode / Carrossel: pode"
+    }
+    if (altura >= 1.4 && altura < 1.5) {
+        mensagemaltura = "Montanha-Russa : Não pode  / Roda Gigante: Não pode / Carrinho bate-bate:  pode /  Trem Fantasma : pode / Carrossel: pode"
+    }
+    if (altura >= 1.5 && altura < 1.6) {
+        mensagemaltura = "Montanha-Russa : Não pode  / Roda Gigante:  pode / Carrinho bate-bate: pode /  Trem Fantasma : pode / Carrossel: pode"
+    }
+    if (altura >= 1.6) {
+        mensagemaltura = "Montanha-Russa :  pode  / Roda Gigante:  pode / Carrinho bate-bate:  pode /  Trem Fantasma :  pode / Carrossel: pode"
+    }
+
+    return mensagemaltura
+}
+
+
+/* Questão 02
 
 Crie um programa para auxiliar um cinema saber se o cliente possui direito à meia entrada.
 Seu programa deverá receber três variaveis:
@@ -14,24 +56,111 @@ Lembrando que um cliente paga meia se for maior de 65 anos, ou menor de 21 anos,
 Tente prever também condições absurdas, como uma pessoa e 65 anos estudante.
 */
 
-function meiaCinema() {
-
-}
-
-/* Questão 02 
-crie um código que receba duas listas e encontre a intersecção entre essas listas.
-Exemplo
-
-lista 01= [0, 2, 5, 7, 10 ,11]
-lista 02= [1, 2, 6, 9, 10]
-
-saída = [2, 10]
-*/
-function intersec() {
-
+function meiaCinema(idade = 0, carteiraestudante = true | false, segundaf = true | false) {
+    var mensagemcinema = ""
+    if (segundaf = true) {
+        mensagemcinema = "todos pagam meia"
+    }
+    else { mensagemcinema = "paga inteira" }
+    if (carteiraestudante = true) {
+        mensagemcinema = "paga meia"
+    }
+    else { mensagemcinema = "paga inteira" }
+    if (idade >= 65 | idade <= 21) {
+        mensagemcinema = "paga meia"
+    }
+    else { mensagemcinema = "paga inteira" }
+    return mensagemcinema
 }
 
 /* Questão 03
+
+Crie uma função que a propria função cria um número aleatório entre 1 e 10. A função receberá
+um "chute" do usuário e deverá retornar se acertou o número gerado pelo programa ou não.
+
+Exemplo: 
+Entrada = 2
+Processamento = O Programa gerou o número 5
+Saída = "Que pena, você chutou 2 mas o nosso número é 5"
+
+<<<<<<< Updated upstream
+Entrada = 7
+Processamento = O programa gerou o número 7
+Saída: "Parabéns! Vocẽ entrou com o número 7 e o programa também gerou o número 7"
+=======
+lista 01= [0, 2, 5, 7, 10 ,11]
+lista 02= [1, 2, 6, 10]
+>>>>>>> Stashed changes
+
+Para gerar um número aleatório entre 1 e 10, utilize o seguinte código
+Math.floor(Math.random() * 10) + 1
+*/
+
+function adivinha(chute = 0, sorteio) {
+    sorteio = Math.floor(Math.random() * 10) + 1
+    var mensagem1 = ""
+    var mensagem2 = ""
+    if (chute == sorteio) {
+        mensagem1 = "o número sorteado foi: " + sorteio
+        mensagem2 = "Os números são iguais, parabéns"
+    }
+    else { mensagem2 = "os números são diferentes, o sorteio deu: " + sorteio }
+    return (mensagem1, mensagem2)
+}
+
+/* Questão 04
+
+Crie um programa que lê dois números, verifica se eles estão entre 40 e 60, e por
+fim retorna o maior entre os dois número
+
+Exemplo:
+Entrada: 45 e 55
+Saída : Os números estão entre 40 e 60, e o maior deles é 55
+
+Entrada: 47 e 47
+Saída: Os números estão entre 40 e 60, e os dois números são iguais
+
+Entrada: 30 e 50
+Saída : Os números não estão entre 40 e 60
+
+*/
+
+function calculaMaior(n1 = 0, n2 = 0) {
+    var mensagem = ""
+    var resultado = ""
+    var varmaior 
+
+    var inf = 40
+    var sup = 60
+    if (n1 >= inf && n1 <= sup && n2 >= inf && n2 <= sup) {
+        mensagem = "o número está dentro dos critérios entre 40-60"
+    }
+    if (n1 > n2) {
+        resultado = "o maior é o primeiro: " + n1
+        varmaior = n1
+        if (varmaior <40 | varmaior> 60)
+        resultado = "número fora do limite"
+    }
+    if (n1 < n2) {
+        resultado = "o maior dele é o segundo: " + n2
+        varmaior = n2
+        if (varmaior <40 | varmaior> 60)
+            resultado = "número fora do limite"
+    }
+    if (n1 == n2) {
+        resultado = "os números são iguais: " + n1
+        varmaior = n1
+        if (varmaior <40 | varmaior> 60)
+            resultado = "número fora do limite"}
+    
+    
+    return resultado
+
+}
+
+/* Desafio
+
+Procure resolver esse exercício em grupo!
 
 Crie um programa que recebe a idade de uma pessoas em segundos e retorne qual seria a
 idade dela se ela estivesse num desses planetas:
@@ -54,6 +183,7 @@ cada minuto com 60 segundos
 
 */
 
-function idadePlaneta() {
+function idadePlanet (idade=0, calcsegundo)
+var calcsegundo = idade*12*30*24*60*60
+var planeta 
 
-}
