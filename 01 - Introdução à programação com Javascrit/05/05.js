@@ -11,20 +11,23 @@ Obs: você pode retonar 1 valor por 1 , ou utilizar um método chamado append.
 
 exemplo prático
 */
-var lista = [1, 2, 3, 4]
-
+var lista = [2, 4, 5, 6]
+           
 function calculaPares(lista) {
+    var listaLocal = []
     var tamanhoLista = lista.length; // Método para retornar tamanho da lista
+
     //Nesse for eu percorro a lista de números que eu crie.
     for (var i = 0; i < tamanhoLista; i++) {
-
         //Nesse console.log(print) eu retorno cada número da lista 1 por vez
-        console.log(lista[i])
-
+                
+        if(lista[i]%2 === 0){
+            listaLocal.push(lista[i])
+        }        
         //Agora é a sua vez! Termine o meu código retornando apenas os número pares
         //Ps.: Antes de rodar o código, teste ele no seu browser para ver como ele se comporta
     }
-
+    console.log(listaLocal)
 }
 /* Questão 02
 
