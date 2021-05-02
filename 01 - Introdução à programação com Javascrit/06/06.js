@@ -4,17 +4,14 @@
 Você foi contratado(a) para trabalhar na NBA, a Liga de Basquete Nacional dos Estados Unidos.
 Seu trabalho é desenvolver um programa que calcule a quantidade de pontos numa partida. Para isso, 
 você deve criar uma função que receba como parametro as cestas de 2 pontos e as cestas de 3 pontos e retorne
-a pontuação final do jogo.
+a pontuação final do jogo. */
 
-exemplo:
-
-função: retornaPontuacao(1, 1)
-saída: 5 pontos
-
-função: retonarPontuacao(3, 3)
-Saída: 15 pontos
-*/
-
+function retornaPontuacao (ponto2, ponto3){
+    var result1 = ponto2 *2
+    var result2 = ponto3 *3
+    var soma = result1 + result2 
+    console.log(`O resultado final é : ${soma}`)
+}
 
 /* Questão 02
 
@@ -37,7 +34,16 @@ retonaAposta(0.2,50,9)
 //processamento 0.2*50-9
 saida : true
 */
-
+function devojogar (prob, premio, custo){
+    console.log(`probabilidade deve ser um valor de 0 a 1 ok?`)
+    var resposta = (prob*premio) - custo
+    var mensagem = ''
+    if (resposta >= 0) {
+        mensagem = 'Jogue!'}
+    else{ 
+        mensagem = 'Não Jogue'}
+    return mensagem
+}
 
 
 /* Questão 03
@@ -52,6 +58,18 @@ entrada:
 calculaCombustivel(16) = 160
 calculaCombustivel(3) = 100
 */
+//console.log ('a gasolina está cara, estudo os preços antes!')
+//console.log ('por favor insira a distância em Km ok?')
+function gastocarro (distancia) {
+console.log ('a gasolina está cara, estudo os preços antes!')
+console.log ('por favor insira a distância em Km ok?')
+var combustivel = distancia * 10
+var mensagem = ''
+    if (distancia>=10){
+    console.log (`A quantidade de combustível é ${combustivel} `)}
+    else {
+    console.log (`Você deve ter o mínimo de 100L de combustível no carro, mas para essa distância a quantidade de combustível necessária é de ${combustivel}`) }
+}
 
 
 
@@ -60,5 +78,17 @@ calculaCombustivel(3) = 100
 Crie uma função que retorne 1, se entrar com 0 e retorne 0 se entrar com um.
 
 Não será permitido o uso de condicionais, como IF ou Switch
-
+ 
 */
+function retorna1 (n1) {
+    console.log('Você deve digitar somente 0 ou 1')
+    var resultado = 0
+    switch (n1) {
+        case "0":
+            var resultado = 1
+            break;
+        case "1":
+            var resultado = 0
+    return resultado }
+
+}

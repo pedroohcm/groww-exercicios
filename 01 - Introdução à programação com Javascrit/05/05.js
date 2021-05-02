@@ -13,8 +13,8 @@ exemplo prático
 */
 
 
-function calculaPares(lista) {
-    var lista = [2,50, 7, 4]
+function calculaPares() {
+    var lista = [2,50, 7, -4]
     var lista2 = []
     var tamanhoLista = lista.length; // Método para retornar tamanho da lista
     //Nesse for eu percorro a lista de números que eu crie.
@@ -23,15 +23,13 @@ function calculaPares(lista) {
 
         //Nesse console.log(print) eu retorno cada número da lista 1 por vez
         console.log(lista[i])
-        if (lista[i]%2==0) {
-            lista2 = lista[i]}
-    return lista2
-
-
+        if (lista[i]%2=== 0) {
+            lista2[i]  = lista[i]}
+    
         //Agora é a sua vez! Termine o meu código retornando apenas os número pares
         //Ps.: Antes de rodar o código, teste ele no seu browser para ver como ele se comporta
     }
-
+return lista2
 }
 /* Questão 02
 
@@ -48,7 +46,7 @@ Saída: 15
 O programa deverá perguntar 5 vezes por uma entrada
 */
 
-function somaNumeros(valores) {
+/*function somaNumeros(valores) {
 listavalores = [0,0,0,0,0]
 for (var i = 0, i < 5, i++){
     var valor = listavalores[i]

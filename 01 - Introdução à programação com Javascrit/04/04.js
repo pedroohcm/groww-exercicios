@@ -56,20 +56,20 @@ Lembrando que um cliente paga meia se for maior de 65 anos, ou menor de 21 anos,
 Tente prever também condições absurdas, como uma pessoa e 65 anos estudante.
 */
 
-function meiaCinema(idade = 0, carteiraestudante = true | false, segundaf = true | false) {
+function meiaCinema(idade = 0, carteiraestudante  , segundaf  ) {
     var mensagemcinema = ""
-    if (segundaf = true) {
-        mensagemcinema = "todos pagam meia"
+    if (segundaf == true) {
+        mensagemcinema = "segunda feira todos pagam meia"
     }
-    else { mensagemcinema = "paga inteira" }
+    else { mensagemcinema == "se não é segunda, paga inteira" }
     if (carteiraestudante = true) {
-        mensagemcinema = "paga meia"
+        mensagemcinema = "carteira de estudante paga meia"
     }
-    else { mensagemcinema = "paga inteira" }
-    if (idade >= 65 | idade <= 21) {
-        mensagemcinema = "paga meia"
+    else { mensagemcinema = "sem carteira paga inteira" }
+    if (idade >= 65 || idade <= 21) {
+        mensagemcinema = "pela sua idade paga meia"
     }
-    else { mensagemcinema = "paga inteira" }
+    else { mensagemcinema = "pela sua idade paga inteira" }
     return mensagemcinema
 }
 
@@ -183,7 +183,8 @@ cada minuto com 60 segundos
 
 */
 
-function idadePlanet (idade=0, calcsegundo)
-var calcsegundo = idade*12*30*24*60*60
-var planeta 
-
+//function idadePlanet (idade=0, calcsegundo)
+//var calcsegundo = idade*12*30*24*60*60
+//var planeta
+//dividir o calcsegundo pelo valor 
+//1461888000

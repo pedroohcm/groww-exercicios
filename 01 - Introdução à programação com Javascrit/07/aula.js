@@ -19,6 +19,7 @@ do{
     console.log(`O valor de n é : ${n}`)
     console.log(`O valor de x é : ${x}`)
 }while (n <= 3); */
+/*
 var string = "O professor Thiago é um cara bem legal"
 var comparacao = "Thiago"
 var letraComposicao = "" //Varial Auxiliar para compor o nome
@@ -47,3 +48,4 @@ while (aux <= string.length) {
 }
 
 
+*/
