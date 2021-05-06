@@ -58,6 +58,7 @@ function hotelGrowwJson(nome) {
 
         if (value.name == nome) {
             return value.number
+            
         }
     }
 }
