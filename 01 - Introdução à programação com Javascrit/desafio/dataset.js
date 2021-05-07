@@ -267,9 +267,9 @@ console.log(media01)
 }*/
 function mediaaluno (notasAlunosJSON) {
     for (var [key, value] of Object.entries(notasAlunosJSON)){
-        for(var [keyNota, valueNota] of Object.entries(value.notas)){            
-            console.log(keyNota)
-            console.log(valueNota)
-        }        
-    }
+        var notas = value.notas
+        var total = Object.values(notas).reduce((a, b) => a + b, 0)/Object.values(notas).length
+        notasAlunosJSON[key]["media"] = total        
+    }    
+    console.log(notasAlunosJSON)
 }
