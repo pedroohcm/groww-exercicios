@@ -8,10 +8,60 @@ Exemplo:
 calculaPar([1])
 retorno: impar
 
-calculaPar([0,1,5,])
+calculaPar([0,1,5])
 retorno: par
 */
 
+function calculaPar(lista){
+    var i = 0; //Variavel incrementadora que vai de 0 ~ tamanho da lista
+    var soma = 0; //Variavel auxiliar para somar todos os itens,
+    while(i < lista.length){
+        soma = soma + lista[i]
+        i++        
+    }
+    if( soma%2 === 0){
+        console.log(`Número par ${soma}`)
+    }else{
+        console.log(`Número Impar ${soma}`)
+    }
+}
+
+
+
+function calculaParporfavo (lista) {
+var soma = 0
+    //console.log ($listanumeros){
+    for (var i = 0; i < lista.length; i++){
+    soma = lista[i] + soma
+        if (soma%2==0) {
+            console.log(`A soma dos valores é par e igual a ${soma}`)}
+        else {
+            console.log(`a soma dos valores é impar e igual a ${soma}` )}
+            
+    }
+}              
+
+function calcVetor (){
+    let calculaNumeros = [];
+
+    //Estrutura for para preencher um array
+    for (let i = 0; i < 10; i++){
+        calculaNumeros.push(prompt(`Informe o ${i+1}º número:`));
+    }
+
+    let soma = 0; 
+    for (let i = 0; i < calculaNumeros.length; i++){
+         soma += parseInt(calculaNumeros[i]);
+    }
+
+    if (soma % 2 === 0) {
+        return alert(`Par`);
+    } else {
+        if (soma % 2 !== 0){
+            return alert(`Ímpar`);
+        }
+    }
+}
 
 
 /* Questão 02
